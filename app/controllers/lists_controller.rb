@@ -10,7 +10,7 @@ class ListsController < ApplicationController
     else
     render :new
     end
-  end
+  end”
 
   def index
     @lists = List.all
