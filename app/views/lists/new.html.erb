@@ -3,6 +3,11 @@
  <%= @list.errors.count %>件のエラーが発生しました
 <%= form_with model:@list, url: '/lists', method: :post, local:true do |f| %>
 <ul>
+ <% @list.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+ <% end %>
+</ul>
+
  <h4>タイトル</h4>
  <%= f.text_field :title %>
 
